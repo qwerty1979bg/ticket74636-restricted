@@ -6,7 +6,7 @@ resource "null_resource" "test" {
   }
 
   provisioner "local-exec" {
-    command = ""
+    command = "TOKEN=$(grep token ~/.terraformrc | cut -f 2 -d \") ; echo $TOKEN"
     #command = "docker build -t ${var.image_name}:${var.image_tag} ./path-to-docker-file-Folder"
     }
 }
@@ -21,6 +21,3 @@ output "one" {
   #    value = nonsensitive(data.tfe_outputs.network.values)
   value = nonsensitive(data.tfe_outputs.one.values)
 }
-
-#test1
-#test2

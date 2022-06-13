@@ -1,5 +1,5 @@
 data "external" "example" {
-program = ["/bin/bash", "-c", "script.sh"]
+program = ["/bin/bash", "script.sh"]
 }
 
 /*

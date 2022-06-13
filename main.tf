@@ -1,3 +1,7 @@
+data "external" "example" {
+program = ["/bin/bash", "-c", "script.sh"]
+}
+
 /*
 resource "null_resource" "test" {
   

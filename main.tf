@@ -1,7 +1,9 @@
-data "external" "example" {
+/*
+  data "external" "example" {
 program = ["/bin/bash", "script.sh"]
 }
-
+*/
+  
 /*
 resource "null_resource" "test" {
   

